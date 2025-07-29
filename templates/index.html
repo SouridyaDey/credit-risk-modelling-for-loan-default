@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Loan Default Prediction</title>
+    <style>
+        body { font-family: Arial; margin: 40px; }
+        input, select { padding: 8px; margin: 8px; }
+        .btn { padding: 10px; background-color: #4CAF50; color: white; border: none; }
+
+        footer {
+            margin-top: 50px;
+            text-align: center;
+            color: #777;
+            font-size: 14px;
+        }
+    </style>
+</head>
+<body>
+    <h2>Loan Default Prediction</h2>
+    <form action="/predict" method="post">
+        <input name="income" placeholder="Income"><br>
+        <input name="loan_amount" placeholder="Loan Amount"><br>
+        <input name="term_length" placeholder="Term Length"><br>
+        <select name="occup">
+            <option value="Salaried">Salaried</option>
+            <option value="Self-employed">Self-employed</option>
+            <option value="Others">Others</option>
+        </select><br>
+        <select name="marital">
+            <option value="Married">Married</option>
+            <option value="Single">Single</option>
+            <option value="Divorced">Divorced</option>
+        </select><br>
+        <input name="schufa" placeholder="Schufa Score"><br>
+        <input name="num_applic" placeholder="Number of Applications"><br>
+        <input name="install_to_inc" placeholder="Install to Income Ratio"><br>
+        <input type="submit" value="Predict" class="btn">
+    </form>
+
+    {% if prediction_text %}
+        <h3>{{ prediction_text }}</h3>
+    {% endif %}
+
+    <footer>
+        Created by Souridya Dey
+    </footer>
+</body>
+</html>
