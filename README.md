@@ -1,10 +1,8 @@
-# 🏦 Credit Risk Modelling for Loan Default
+# Credit Risk Modelling for Loan Default
 
 This project builds a classification model to predict the probability of mortgage loan default using applicant financial and demographic data. The model is deployed using a Flask web interface for user-friendly interaction.
 
----
-
-## 📊 Project Overview
+## Project Overview
 
 - **Objective**: Predict loan default likelihood to enable rejection of high-risk profiles.
 - **Model Used**: Logistic Regression with class balancing.
@@ -16,9 +14,7 @@ This project builds a classification model to predict the probability of mortgag
   - Top 3 deciles captured **85%+** of actual defaulters.
   - Lift in top 3 deciles: **3x** (Train & OOT)
 
----
-
-## 🔍 Techniques Used
+## Techniques Used
 
 - Feature engineering and imputation
 - Outlier detection via quantiles
@@ -30,9 +26,7 @@ This project builds a classification model to predict the probability of mortgag
   - Gini Coefficient
   - Decile-based Rank Ordering, Capture rate & lift analysis
 
----
-
-## 🚀 Web Deployment (Flask)
+## Web Deployment (Flask)
 
 A simple web app allows users to input applicant data and receive a real-time prediction of default risk.
 
@@ -40,3 +34,8 @@ A simple web app allows users to input applicant data and receive a real-time pr
 - HTML form with input fields (text and dropdowns)
 - Flask backend to process and predict
 - Prediction displayed on the same page
+
+
+## Containerization (Docker)
+
+The application has been dockerized completely and the Docker image has been pushed to DockerHub. Now anyone can take a pull of the image and run it on their system.
